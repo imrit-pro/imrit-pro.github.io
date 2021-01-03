@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gst Calculator</title>
+  <!-- HTML -->
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h2>GST Calculator</h2>
+  <form class="form">
+  <table>
+    <p>Enter Rate & Qty</p>
+      <tr>
+        <td> Rate: </td>
+        <td><input type="number" id="rate" value="100" min="0" step="any"/><br> </td>
+      </tr>
+      <tr>
+        <td> Qty: </td>
+        <td><input type="number" id="qty" value="1" min="0" step="any"/><br> </td>
+      </tr>
+      <tr>
+        <td> Gst%: </td>
+        <td><select id="gstPercentage" required>
+          <option value="0%">0%</option>
+          <option value="12%">12%</option>
+          <option value="18%" selected>18%</option>
+          <option value="28%">28%</option>
+         </select>
+        </td>
+      </tr>
+  
+      <tr>
+        <br>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <input class="button" type="button" id="btn" value="Calculate" onclick="calculate()"/>
+          <input class="button" id="btn-2" type="reset" value="Clean" onclick="document.getElementById('output').style.display = 'none'"; />
+        </td>
+      </tr>
+    </table>
+    <br />
+    </form>
+    
+     <div id="output">
+       <h4 id="output_1"></h4>
+       <h4 id="output_2"></h4>
+       <h4 id="output_3"></h4>
+     </div>
+  <!-- Project -->
+  <script src="main.js"></script>
+</body>
+
+</html>

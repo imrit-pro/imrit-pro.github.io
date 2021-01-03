@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  height: 1000px;
+  width: 100%;
+  text-align: center;
+  background: #fcfcfc;
+}
+
+h2 {
+  margin-top: 47px;
+  text-align: center;
+  color: #0077ff;
+  font-size: 50px;
+}
+
+
+section {
+  padding: 30px;
+  margin-bottom: 40px;
+}
+
+button,
+.button {
+  background: #0077ff;
+  border: 0;
+  color: white;
+  font-size: 15px;
+  padding: 10px;
+  width: 100%;
+  margin-top: 5%;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+#btn-2{
+  background-color: #FF3B2F;
+  
+}
+.button:hover{
+  border: 2px solid #060619 ;
+}
+.blue {
+  background: #0077ff;
+}
+
+form {
+  background:#ebebeb ;
+  box-sizing: border-box;
+  border: 2px solid #060619;
+  height: 500px;
+  width: 80%;
+  margin: 10%;
+}
+p{
+  margin-top: 5px;
+  color: #060619;
+  font-size: 25px;
+  font-weight: 500;
+}
+select{
+  background: #fcfcfc;
+  color: #060606; 
+  width: 90%;
+  height: 30px;
+  font-weight: 500;
+}
+
+td {
+  padding: 10px;
+  text-align: left;
+  font-size: 1.3em;
+  font-weight: 600;
+
+}
+
+table {
+  margin: auto;
+}
+
+#qty,
+#rate {
+  height: 30px;
+  text-align: left;
+  font-size: 20px;
+  width: 90%;
+}
+
+#qty,
+#rate {
+  color: #060619;
+}
+
+#qty {
+  margin-top: 20px;
+}
+
+
+#output{
+  height: 20%;
+  width: 80%;
+  background-color: #0077ff;
+  color: #060619;
+  padding: 25px;
+  margin-left:10%;
+  display: none;
+  text-align: left;
+  margin-bottom: 100px;
+  box-sizing: border-box;
+  border: 2px solid #000;
+  transition: 0.5 s ease;
+}
