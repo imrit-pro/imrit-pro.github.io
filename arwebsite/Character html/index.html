@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Ar Website</title>
+  
+  
+  <!-- Import the component -->
+  
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  
+  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+  
+  
+  <!--Custom Style-->
+  <link rel="stylesheet" href="style2.css">
+  
+</head>
+
+
+<body>
+  
+  <!-- Use it like any other HTML element --> <div class="demo">
+<model-viewer id="model" src=" RobotExpressive.glb"  auto-rotate camera-controls  skybox-image="stadium.hdr" animation-name="Wave" autoplay ar></model-viewer>
+
+      <div class="btn">
+        <button type="button" onclick="run()">RUN</button>
+       <button type="button" onclick="wave()">WAVE</button>
+        <button type="button" onclick="stop()">STOP</button>
+      </div>
+    </div>
+
+
+
+  <script>
+    var modelViewer=document.getElementById('model');
+
+function run(){
+
+  modelViewer.animationName = 'Running';
+}
+function wave(){
+  modelViewer.animationName = 'Wave';
+}
+function stop(){
+  modelViewer.animationName = 'none';
+}
+
+ 
+  </script>
+</body>
+</html>
