@@ -174,12 +174,14 @@ img{
 
 .share-container {
   position: absolute;
-  top: 30vh;
-  margin: auto;
-  width: 100%;
+  top: 28vh;
+  margin-left: 1%;
+  margin-bottom: 2%;
+  width: 98%;
   height: 70vh;
   background-color: var(--bg);
   text-align: center;
+  border-radius: 25px;
   transition: all 750ms ease-in-out;
 }
  h2 {
@@ -195,13 +197,15 @@ img{
 }
 .close{
   color: var(--color-text);
-  margin-top: 20px;
+  width: 30px;
+  height: 30px;
+  margin-top: 17px;
   margin-right: 40px;
   float: right;
   border: none;
   background: none;
   outline: none;
-  font-size: 30px;
+  font-size: 32px;
   cursor: pointer;
   transition: 0.5 ease;
 }
@@ -212,14 +216,20 @@ img{
 .qr-img  {
   float: left;
   margin-left: 10%;
-  margin-top: 40px;
-  margin-bottom: 15px;
+  margin-top: 25px;
+  margin-bottom: 25px;
   height: 350px;
   width: 350px;
   border-radius: 5%;
   box-shadow: 16px 16px 25px -4px rgba(30, 30, 60, 0.25);
 }
-
+.head-p{
+  margin-top: 30px;
+  font-size: 22px;
+  position: relative;
+  bottom: 15px;
+  color: var(--text);
+}
 
 input[type=checkbox] {
   height: 0;
@@ -547,13 +557,16 @@ a:hover{
   }
   .share-container {
     position: absolute;
-    top: 25vh;
+    top: 20vh;
     margin: auto;
     width: 100%;
-    height: 75vh;
+    height: 100vh;
     background-color: var(--bg-panel);
     text-align: center;
-    transition: all 750ms ease-in-out;
+    text-align: center;
+  transition: all 750ms ease-in-out;
+  border-radius: 40px;
+  position: fixed;
   }
   
   .show-share {
@@ -578,16 +591,18 @@ a:hover{
   }
   
   .qr-img  {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 30px;
-    height: 275px;
-    width: 275px;
+    margin-top:50px;
+    height: 300px;
+    width: 300px;
     border-radius: 5%;
     box-shadow: 16px 16px 25px -4px rgba(30, 30, 60, 0.25);
   }
-  
+  .head-p{
+    margin-top: 35px;
+    font-size: 22px;
+    position: relative;
+    bottom: 15px;
+  }
   h2 {
     margin-top: 10px;
     text-align: center;
