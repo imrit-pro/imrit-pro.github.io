@@ -10,22 +10,34 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
+  <div class="loading">
+    <div class="animation">
+      <img src="/images/Bean Eater-1s-200px.gif" alt="" srcset="">
+      <h1>loading...</h1>
+    </div>
+  </div>
+
   <nav class="navbar">
     <div class="content">
       <div class="logo">
         <a href="#">MY BLOG</a>
       </div>
       <ul class="menu-list">
+        <div class="drop-menu"><button id="wrapper-btn">Menu <i class="fas fa-bars"></i></button></div>
         <div class="icon cancel-btn">
+        
           <i class="fas fa-times"></i>
         </div>
+        <div class="wrapper">
         <li><a href="index.html">Home <i class="fas fa-home"></i></a></li>
         <li><a href="project.html">Project <i class="fas fa-shapes"></i></a></li>
-        <li><a href="about.html">About <i class="fas fa-address-card"></i></a></li>
+        <li><a href="">About <i class="fas fa-address-card"></i></a></li>
         <li><a href="mailto:programmingrit0@gmail.com">Contact <i class="fas fa-at"></i></a></li>
+        <hr>
         <li><a href="#" class="btn">Share <i class="fas fa-share-alt"></i></a></li>
+        <hr>
         <li><a href="#">Theme</a><input type="checkbox" name="theme" id="switch"><label for="switch">Theme</label></li>
-        
+        </div>
       </ul>
       <div class="icon menu-btn">
         <i class="fas fa-bars"></i>
@@ -35,39 +47,40 @@
   <div class="banner"></div>
     <div class="content">
       <div class="title">
-        <div class="images" style="margin-top: 50px; color: var(--color-text);">
-          <h4 style="text-align: center; font-size: xx-large;">Experience In:</h4><br>
-        <div class="img1" style="height: auto;
-        width: 100%;
-        text-align: center;
-        font-size: x-large;
-        ">    
+        <div class="about" id="about-me">
+          <h1 class="about-title">About Me</h1>
+          <div class="about-author">
+              <img src="images/me.jpg" alt="">
+             
+          </div>
+
+          <div class="about-content">
+              <p>Hi there! I'm an aspring <b>Web Developement.</b></p>
+              <p>If you like <a href="index.html"><b>My Blog</b></a>, please follow me on <a href="https://github.com/imrit-pro" target="blank">Github</a> and
+                <a href="https://www.instagram.com/__iamrit__/" target="blank">Instagrm</a> and tell your family and friends about it. If you want to get in touch with me,
+          than click on the contact link in the navigation bar to contact me. </p>
+                <br>
+                <h2>Working With</h2>
+          </div>
+        </div>
+        
+        <div class="images">
+        <div class="img1">    
         <img src="./images/logo_html.png" alt="">
-        <h3>HTML</h3>
         </div><br>
-        <div class="img2" style="height: auto;
-        width: 100%;
-        text-align: center;
-        font-size: x-large">
+        <div class="img2">
           <img src="./images/logo_css.png"  alt="">
-          <h3>CSS</h3>
         </div><br>
-        <div class="img3" style="height: auto;
-        width: 100%;
-        text-align: center;
-        font-size: x-large;">
+        <div class="img3">
           <img src="./images/logo_js.png"  alt="">
-          <h3>JAVASCRIPT</h3>
         </div><br>
-        <div class="img4" style="height: auto;
-        width: 100%;
-        text-align: center;
-        font-size: x-large;"> 
+        <div class="img4"> 
           <img src="./images/logo_brush.png" alt="">
-          <h3>DESIGN</h3>
         </div><br>
         </div>
-      </div>
+      </div><hr>
+
+                  <!--overlay and share option-->
   <div class="overlay">
     <div class="share-container">
       <button class="close">&times;</button>
@@ -80,6 +93,63 @@
     </div>
     </div>
   </div>
+
+
+                      <!--project content-->
+                            <!--project-1-->
+      <div class="title">
+        <h2>Projects</h2>
+      <div class="project">
+        <div class="pic">
+          <img src="./dataimg/robo.jpg" alt="">
+        </div>
+        <div class="data">
+          <h3>AR ROBOT</h3><br>
+          <div class="btn">
+          <a href="https://imrit-pro.github.io/arwebsite/main.html" target="_blank"><button id="btn1" type="submit">VIEW <i class="fas fa-eye"></i></button></a>
+          <a href="https://github.com/imrit-pro/ar-robo" target="_blank"><button id="btn2" type="submit">CODE <i class="fab fa-github"></i></button></a>
+          </div>       
+        </div>
+      </div>
+    </div><br>
+  
+                          <!--project-2-->
+    <div class="title">
+      <div class="project">
+        <div class="pic">
+          <img src="./dataimg/gst-cal screenshoot.png" alt="">
+        </div>
+        <div class="data">
+          <h3>GST CALCULATOR</h3><br>
+          <div class="btn">
+            <a href="https://imrit-pro.github.io/gstcalculator/" target="_blank"><button id="btn1"type="submit">VIEW <i class="fas fa-eye"></i></button></a>
+            <a href="https://github.com/imrit-pro/gst-calculator" target="_blank"><button id="btn2"type="submit">CODE <i class="fab fa-github"></i></button></a>
+          </div>       
+        </div>
+      </div>
+    </div><br><hr>
+
+<!--add new peoject here--
+<div class="title">
+  <div class="project">
+    <div class="pic">
+      <img src="./dataimg/gst-cal screenshoot.png" alt="">
+    </div>
+    <div class="data">
+      <h3>GST CALCULATOR</h3><br>
+      <div class="btn">
+        <a href="https://imrit-pro.github.io/gstcalculator/" target="_blank"><button id="btn1"type="submit">VIEW <i class="fas fa-eye"></i></button></a>
+        <a href="https://github.com/imrit-pro/gst-calculator" target="_blank"><button id="btn2"type="submit">CODE <i class="fab fa-github"></i></button></a>
+      </div>       
+    </div>
+  </div>
+</div><br>-->
+
+
+                          <!--about-->
+
+
+                        <!--footer-->
   <div id="footer">
     <div class="container">
         <div class="column">
@@ -97,6 +167,7 @@
         <p>Hi there! I'm an aspring web developer.</p>
         </div>
     </div><br>
+
     <!--div class="copyright">
       <h5>Ritesh Gharat, Copyright &copy; 2020</h5>
     <div-->

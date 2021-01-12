@@ -1,4 +1,8 @@
-
+//loadi8ng animation
+window.addEventListener('load', () => {
+  const loading = document.querySelector(".loading");
+  loading.classList.add("animation-finish");
+});
 //slide menu for mobile 
 
 const body = document.querySelector("body");
@@ -18,7 +22,15 @@ const body = document.querySelector("body");
     window.onscroll = ()=>{
       this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
     }
-
+//drop down
+   const wrapperBtn = document.querySelector("#wrapper-btn");
+   const wrapper = document.querySelector(".wrapper");
+   
+   wrapperBtn.addEventListener('click', () => {
+   wrapper.classList.add('wrapper-show');
+  });
+    
+  
 
 //theme changer
 
