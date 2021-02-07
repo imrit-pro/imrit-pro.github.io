@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculator</title>
+  <link rel="manifest" href="manifest.json">
+  <link href="./images/logo.png">
+  <link rel="stylesheet" href="./content/style.css">
+</head>
+
+<body>
+  <form class="calculator" name="calc">
+    <p class="menuBtn"><img src="./images/ellipsis-v-solid.svg" alt="" /></p>
+
+    <input type="text" class="value" name="txt" readonly min="1" max="15" maxlength="15" />
+    <span class="num seven" onclick="document.calc.txt.value +='7' ">7</span>
+    <span class="num eight" onclick="document.calc.txt.value +='8' ">8</span>
+    <span class="num nine" onclick="document.calc.txt.value +='9' ">9</span>
+    <span class="num change" onclick="document.calc.txt.value = ''">C</span>
+    <span class="num clear" onclick="document.calc.txt.value = ''">DEL</span>
+    <span class="num four" onclick="document.calc.txt.value +='4' ">4</span>
+    <span class="num five" onclick="document.calc.txt.value +='5' ">5</span>
+    <span class="num six" onclick="document.calc.txt.value +='6' ">6</span>
+    <span class="num divide" onclick="document.calc.txt.value +='/' ">&divide;</span>
+    <span class="num sub" onclick="document.calc.txt.value +='-' ">-</span>
+    <span class="num one" onclick="document.calc.txt.value +='1'">1</span>
+    <span class="num two" onclick="document.calc.txt.value +='2' ">2</span>
+    <span class="num three" onclick="document.calc.txt.value +='3' ">3</span>
+    <span class="num add" onclick="document.calc.txt.value +='+' ">+</span>
+    <span class="num multi" onclick="document.calc.txt.value +='*' ">&times;</span>
+
+    <!--span class="num" onclick="document.calc.txt.value +='(' ">(</span>
+    <span class="num" onclick="document.calc.txt.value +=')' ">)</span-->
+    <span class="num zero" onclick="document.calc.txt.value +='0' ">0</span>
+    <span class="num dozero" onclick="document.calc.txt.value +='00' ">00</span>
+    <span class="num dot" onclick="document.calc.txt.value +='.' ">.</span>
+    <span class="num equal" onclick="document.calc.txt.value = eval(calc.txt.value)">=</span>
+  </form>
+
+  <section>
+    <div class="container">
+      <div class="content">
+        <p class="btnBar"><img class="closeBtn" src="./images/times-circle-regular.svg" alt="" /></p>
+        <img class="logo" src="./images/logo.png" alt="">
+        <h2>Talking CalC!</h2><br>
+        <p class="para"><b>Introducting Talking CalC!.</b> It is Web (PWA) based Calculator, made using basic <b> Html,
+            Css, Js and PWA.</b>
+          You can easy Download it and run on any OS without any problem. You can get this app code of GitHub <b>(not
+            for commercial
+            purpose.)</b></p><br>
+        <a href="#"><button class="github">GitHub <img src="./images/github-brands.svg"
+              style="height: 15px; color: #000000;"></button></a>
+        <p class="vs">VS 0.1</p>
+      </div>
+    </div>
+  </section>
+  <script src="./content/main.js"></script>
+</body>
+
+</html>

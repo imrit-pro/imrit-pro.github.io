@@ -1,0 +1,36 @@
+{
+  "name": "Calculator.app",
+  "short_name": "CalC.app",
+  "display": "fullscreen",
+  "icons": [
+    {
+      "src": "logos/icon48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "logos/icon96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "logos/icon144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "logos/icon196.png",
+      "sizes": "196x196",
+      "type": "image/png"
+    },
+    {
+      "src": "logos/icon512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "app.html",
+  "theme_color": "#0051ff",
+  "background_color": "#EEEEEE",
+  "orientation":"portrait"
+}

@@ -1,0 +1,516 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #FFFFF7;
+}
+
+.menuBtn{
+  outline: none;
+  background: none;
+  border: none;
+  width: 8px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 8px;
+  cursor: pointer;
+}
+
+.container .content .btnBar{
+  width: 100%;
+  height: 40px;
+  display: block;
+}
+.container .content .btnBar .closeBtn{
+  height: 20px;
+  width: 20px;
+  position: relative;
+  top: 10px;
+  left: 97%;
+  cursor: pointer;
+}
+.calculator{
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  z-index: 0;
+}
+.calculator-show{
+  display: none;
+}
+
+.calculator .value {
+  grid-column: span 5;
+  height: 30vh;
+  width: 98%;
+  padding-right: 2%;
+  text-align: right;
+  border: none;
+  outline: none;
+  font-size: 45px;
+}
+
+.calculator .num{
+  display: grid;
+  height: 17.5vh;
+  min-width: 20%;
+  place-items: center;
+  font-size: 25px;
+  cursor: pointer;
+}
+.calculator span:active{
+  color:#fff;
+  background-color: hsla(212, 89%, 52%, 0.822);
+}
+
+.calculator span.one {
+  order: 11;
+}
+
+.calculator span.two {
+  order: 12;
+}
+
+.calculator span.three {
+  order: 13;
+}
+
+.calculator span.four {
+  order: 6;
+}
+
+.calculator span.five {
+  order: 7;
+}
+
+.calculator span.six {
+  order: 8;
+}
+
+.calculator span.seven {
+  order: 1;
+}
+
+.calculator span.eight {
+  order: 2;
+}
+
+.calculator span.nine {
+  order: 3;
+}
+.calculator span.clear {
+  order: 5;
+  color:#0077ff;
+}
+
+.calculator span.add {
+  grid-row: span 2;
+  height: 35vh;
+  order: 14;
+  color: #0077ff;
+}
+
+.calculator span.sub {
+  order: 10;
+  color: #0077ff;
+}
+
+.calculator span.multi {
+  order: 15;
+  color:#0077ff;
+}
+
+.calculator span.divide {
+  order: 9;
+  color:#0077ff;
+}
+
+.calculator span.zero {
+  order: 16;
+}
+
+.calculator span.dozero {
+  order: 17;
+}
+
+.calculator span.dot {
+  order: 18;
+}
+
+.calculator span.change {
+  order: 4;
+}
+
+.calculator span.equal {
+  order: 19;
+  background-color: #0077ff;
+  color: #FFFFF7;
+}
+
+.container{  
+  height: 100vh;
+  width: 100%;
+  background: ivory;
+  position: relative;
+  z-index: 1;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.container-show {
+  display: flex;
+  animation: slideRight 0.5s ease-in;
+}
+.container .content{
+  width: 90%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 2px dashed black;
+}
+
+.container .content .logo{
+  width: 275px;
+  height: 275px;
+}
+.container .content h2{
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.container .content .para{
+  width: 70%;
+  padding: 20px;
+  margin-left: 50px;
+  font-size: 15px;
+  font-weight:500;
+}
+.content .github{
+  height: 30px;
+  width: 100px;
+  outline: none;
+  border: none;
+  color:#000;
+  font-weight: 700;
+  background-color: #0077ff;
+  border-radius:2px;
+  border: 2px solid black;  
+  text-align: center;
+  cursor: pointer;
+  
+}
+.content .github:active{
+  border-color:#fff;
+  color: #fff;
+}
+.content .github:hover{
+  box-shadow: 20px 20px 25px -8px rgba(30, 30, 60, 0.6);
+}
+.content .vs{
+  padding: 40px;
+  font-size: 13px;
+  color: #0051ff;
+  text-decoration: underline;
+
+}
+
+@keyframes slideRight{
+  0%{
+    transform:translateX(100%);
+  }
+  100%{
+    transform:translateX(0%)
+  }
+}
+
+@media screen and (max-width: 786px) {
+
+  .calculator {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    z-index: 0;
+  }
+  .calculator-show {
+    display: none;
+  }
+  .calculator .value {
+    grid-column: span 4;
+    height: 20vh;
+    width: 98%;
+    padding-right: 2%;
+    text-align: right;
+    border: none;
+    outline: none;
+    font-size: 40px;
+  }
+
+  .calculator .num {
+    display: grid;
+    height: 16vh;
+    min-width: 25%;
+    color: #000;
+    background-color: #FFFFF7;
+    place-items: center;
+    font-size: 25px;
+  }
+  .calculator span.one {
+    order: 13;
+  }
+  
+  .calculator span.two {
+    order: 14;
+  }
+  
+  .calculator span.three {
+    order: 15;
+  }
+  
+  .calculator span.four {
+    order: 9;
+  }
+  
+  .calculator span.five {
+    order: 10;
+  }
+  
+  .calculator span.six {
+    order: 11;
+  }
+  
+  .calculator span.seven {
+    order: 5;
+  }
+  
+  .calculator span.eight {
+    order: 6;
+  }  
+  .calculator span.nine {
+    order: 7;
+  }
+  .calculator span.clear {
+    order: 4;
+  }
+  
+  .calculator span.add {
+    grid-row: span 2;
+    height: 32vh;
+    order: 12;
+  }
+  
+  .calculator span.sub {
+    order: 8;
+  }
+  
+  .calculator span.multi {
+    order: 3;
+  }
+  
+  .calculator span.divide {
+    order: 2;
+  }
+  
+  .calculator span.zero {
+    order: 16;
+  }
+  
+  .calculator span.dozero {
+    order: 17;
+  }
+  
+  .calculator span.dot {
+    order: 18;
+  }
+  
+  .calculator span.change {
+    order: 1;
+  }
+  
+  .calculator span.equal {
+    order: 19;
+  } 
+  .container{  
+    height: 100vh;
+    width: 100%;
+    background: ivory;
+    position: relative;
+    z-index: 1;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  .container-show{
+    display: flex;
+    animation: slideRight 0.5s ease-in;
+  }
+  
+@keyframes slideRight{
+  0%{
+    transform:translateX(100%);
+  }
+  100%{
+    transform:translateX(0%)
+  }
+}
+  .container .content{
+    width: 95%;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed black;
+    position: fixed;
+  }
+  
+  .container .content .btnBar{
+  margin-top: 10px;
+  width: 100%;
+  height: 40px;
+  display: block;
+}
+  .container .content .btnBar .closeBtn{
+  height: 20px;
+  width: 20px;
+  position: relative;
+  top: 10px;
+  left: 90%;
+  cursor: pointer;
+}
+  .container .content .logo{
+    width: 200px;
+    height: 200px;
+  }
+  .container .content h2{
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .container .content .para{
+    padding: 20px;
+    font-size: 15px;
+    font-weight:500;
+  }
+  .content .github{
+    height: 30px;
+    width: 100px;
+    outline: none;
+    border: none;
+    color:#000;
+    font-weight: 700;
+    background-color: #0077ff;
+    border-radius:2px;
+    border: 2px solid black;  
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 20px 20px 25px -8px rgba(30, 30, 60, 0.6);
+  }
+  .content .github:active{
+    border-color:#fff;
+    color: #fff;
+  }
+  .content .vs{
+    padding: 40px;
+    font-size: 13px;
+    color: #0051ff;
+    text-decoration: underline;
+  
+  }
+}
+@media screen and (max-width:400px){
+  .container{  
+    height: 100vh;
+    width: 100%;
+    background: ivory;
+    position: relative;
+    z-index: 1;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  .container-show{
+    display: flex;
+    animation: slideRight  0.25s ease-in;
+  }
+  
+@keyframes slideRight{
+  0%{
+    transform:translateX(100%);
+  }
+  100%{
+    transform:translateX(0%)
+  }
+}
+  .container .content{
+    width: 92%;
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed black;
+    position: fixed;
+  }
+  
+  .container .content .btnBar{
+  margin-top: 5vh;
+  width: 100%;
+  height: 40px;
+  display: block;
+}
+  .container .content .btnBar .closeBtn{
+  height: 20px;
+  width: 20px;
+  position: relative;
+  left: 90%;
+  cursor: pointer;
+}
+  .container .content .logo{
+    width: 175px;
+    height: 175px;
+  }
+  .container .content h2{
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .container .content .para{
+    font-size: 15px;
+    font-weight:500;
+  }
+  .content .github{
+    height: 25px;
+    width: 100px;
+    outline: none;
+    border: none;
+    color:#000;
+    font-weight: 700;
+    background-color: #0077ff;
+    border-radius:2px;
+    border: 2px solid black;  
+    text-align: center;
+    cursor: pointer;
+  }
+  .content .github:active{
+    border-color:#fff;
+    color: #fff;
+  }
+  .content .vs{
+    padding: 10px;
+    font-size: 12px;
+    color: #0051ff;
+    text-decoration: underline;
+  
+  }
+}
