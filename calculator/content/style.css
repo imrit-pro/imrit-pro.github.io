@@ -155,7 +155,7 @@ body {
   color: rgb(209, 27, 63);
   order: 4;
 }
-.calculator span.change:active{
+.calculator .change:active{
   background-color:rgb(194, 81, 104);
   color: white;
 }
@@ -255,16 +255,6 @@ body {
 
 @media screen and (max-width: 786px) {
 
-  .calculator {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    display: grid;
-    z-index: 0;
-  }
-  .calculator-show {
-    display: none;
-  }
   .calculator .value {
     grid-column: span 4;
     height: 20vh;
@@ -369,15 +359,17 @@ body {
     width: 100%;
     background: ivory;
     position: relative;
-    z-index: 1;
+    z-index: 0;
     display: none;
     align-items: center;
     justify-content: center;
   }
   .container-show{
+    z-index: 1;
     display: flex;
     animation: slideRight 0.5s ease-in;
   }
+  
   
 @keyframes slideRight{
   0%{
@@ -397,6 +389,9 @@ body {
     border: 2px dashed black;
     position: fixed;
   }
+  .container-close{
+  z-index: 0;
+}
   
   .container .content .btnBar{
   margin-top: 10px;
@@ -453,20 +448,23 @@ body {
   }
 }
 @media screen and (max-width:400px){
-  .container{  
-    height: 100vh;
-    width: 100%;
-    background: ivory;
-    position: relative;
-    z-index: 1;
-    display: none;
-    align-items: center;
-    justify-content: center;
-  }
-  .container-show{
-    display: flex;
-    animation: slideRight  0.25s ease-in;
-  }
+  
+.container{  
+  height: 100vh;
+  width: 100%;
+  background: ivory;
+  position: relative;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+.container-show {
+  display: flex;
+  z-index: 1;
+  animation: slideRight 0.5s ease-in;
+}
+
   
 @keyframes slideRight{
   0%{
@@ -486,7 +484,9 @@ body {
     border: 2px dashed black;
     position: fixed;
   }
-  
+  .container-close{
+z-index:0;
+}
   .container .content .btnBar{
   margin-top: 5vh;
   width: 100%;
