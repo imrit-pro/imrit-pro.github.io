@@ -9,8 +9,18 @@ if ('serviceWorker' in navigator) {
 	});
 }
 
+//function to add number using keyboard
 
-//Function to display about
+const calc = document.querySelector('.value');
+
+calc.addEventListener('keyup', (e) =>{
+	if(e.keyCode === 49){
+		console.log(e.target.value);
+	}
+})
+
+
+//Function to display about box
 const menuBtn = document.querySelector('.menuBtn');
 const closeBtn = document.querySelector('.closeBtn');
 const container = document.querySelector('.container');
