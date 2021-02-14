@@ -5,21 +5,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Calculator</title>
+  <title>Calculator.app</title>
   <link rel="manifest" href="manifest.json">
   <link href="./images/logo.png">
   <link rel="stylesheet" href="./content/style.css">
 </head>
 
 <body>
-  <form class="calculator" name="calc">
+  <form class="calculator" name="calc" onkeyup="keyupfunction()">
     <p class="menuBtn"><img src="./images/ellipsis-v-solid.svg" alt="" /></p>
-    <input type="text" class="value" name="txt" readonly min="1" max="15" maxlength="15" />
+    <input type="text" class="value" name="txt" readonly maxlength="15" placeholder="0" />
     <span class="num seven" onclick="document.calc.txt.value +='7' ">7</span>
     <span class="num eight" onclick="document.calc.txt.value +='8' ">8</span>
     <span class="num nine" onclick="document.calc.txt.value +='9' ">9</span>
-    <span class="num change" onclick="document.calc.txt.value = ''">C</span>
-    <span class="num clear" onclick="document.calc.txt.value = ''">DEL</span>
+    <span class="num change" onclick="document.calc.txt.value = ''">DEL</span>
+    <span class="num clear">&#8592</span>
     <span class="num four" onclick="document.calc.txt.value +='4' ">4</span>
     <span class="num five" onclick="document.calc.txt.value +='5' ">5</span>
     <span class="num six" onclick="document.calc.txt.value +='6' ">6</span>
@@ -50,8 +50,9 @@
           You can easy Download it and run on any OS without any problem. You can get this app code of GitHub <b>(not
             for commercial
             purpose.)</b></p><br>
-        <a href="#"><button class="github">GitHub <img src="./images/github-brands.svg"
-              style="height: 15px; color: #000000;"></button></a>
+        <a href="https://github.com/imrit-pro/imrit-pro.github.io/tree/61fc8807f933933dbb9a287b5f7bad42b6e07c04/calcapp" target="_blank"><button class="btn github">GitHub <img src="./images/github-brands.svg"
+              style="height: 15px; color: #000000;"></button></a><br>
+         <select id='voiceList' class="btn voiceList"><option label="Voices"></option></select>
         <p class="vs">VS 0.1</p>
       </div>
     </div>

@@ -8,17 +8,14 @@ if ('serviceWorker' in navigator) {
 		console.log('ServiceWorker registration failed: ', err);
 	});
 }
-
-//function to add number using keyboard
-
-const calc = document.querySelector('.value');
-
-calc.addEventListener('keyup', (e) =>{
-	if(e.keyCode === 49){
-		console.log(e.target.value);
-	}
+//calculator function
+const del = document.querySelector('.clear');
+var a = document.calc.txt.value;
+ 
+del.addEventListener('click', () =>{
+	var a = document.calc.txt.value;
+	document.calc.txt.value = a.substr(0, a.length-1);
 })
-
 
 //Function to display about box
 const menuBtn = document.querySelector('.menuBtn');
@@ -26,12 +23,53 @@ const closeBtn = document.querySelector('.closeBtn');
 const container = document.querySelector('.container');
 const calculator = document.querySelector('.calculator');
 
-menuBtn.addEventListener('click', () =>{
-  container.classList.add('container-show');
-  calculator.classList.add('calculator-show');
+menuBtn.addEventListener('click', () => {
+	container.classList.add('container-show');
+	calculator.classList.add('calculator-show');
 });
 
-closeBtn.addEventListener('click', () =>{
-  container.classList.remove('container-show');
-  calculator.classList.remove('calculator-show');
+closeBtn.addEventListener('click', () => {
+	container.classList.remove('container-show');
+	calculator.classList.add('calculator-close');
 });
+
+
+
+//text-to-speech api
+
+var txtInput = document.querySelector('.value');
+var voiceList = document.querySelector('#voiceList');
+var btnSpeak = document.querySelector('.equal');
+var synth = window.speechSynthesis;
+var voices = [];
+
+PopulateVoices();
+if(speechSynthesis !== undefined){
+	speechSynthesis.onvoiceschanged = PopulateVoices;
+}
+
+btnSpeak.addEventListener('click', ()=> {
+	var toSpeak = new SpeechSynthesisUtterance(txtInput.value);
+	var selectedVoiceName = voiceList.selectedOptions[0].getAttribute('data-name');
+	voices.forEach((voice)=>{
+		if(voice.name === selectedVoiceName){
+			toSpeak.voice = voice;
+		}
+	});
+	synth.speak(toSpeak);
+});
+
+function PopulateVoices(){
+	voices = synth.getVoices();
+	var selectedIndex = voiceList.selectedIndex < 0 ? 0 : voiceList.selectedIndex;
+	voiceList.innerHTML = '';
+	voices.forEach((voice)=>{
+		var listItem = document.createElement('option');
+		listItem.textContent = voice.name;
+		listItem.setAttribute('data-lang', voice.lang);
+		listItem.setAttribute('data-name', voice.name);
+		voiceList.appendChild(listItem);
+	});
+
+	voiceList.selectedIndex = selectedIndex;
+}

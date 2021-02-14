@@ -42,10 +42,14 @@ body {
   height: 100vh;
   width: 100%;
   display: grid;
-  z-index: 0;
+  z-index: 1;
 }
 .calculator-show{
-  display: none;
+  z-index: 0;
+}
+.calculator-close{
+  z-index: 1;
+  animation: slideRight 0.5s ease-in;
 }
 
 .calculator .value {
@@ -127,6 +131,7 @@ body {
 .calculator span.multi {
   order: 15;
   color:#0077ff;
+  
 }
 
 .calculator span.divide {
@@ -147,9 +152,13 @@ body {
 }
 
 .calculator span.change {
+  color: rgb(209, 27, 63);
   order: 4;
 }
-
+.calculator span.change:active{
+  background-color:rgb(194, 81, 104);
+  color: white;
+}
 .calculator span.equal {
   order: 19;
   background-color: #0077ff;
@@ -161,15 +170,17 @@ body {
   width: 100%;
   background: ivory;
   position: relative;
-  z-index: 1;
   display: none;
   align-items: center;
   justify-content: center;
+  z-index: 0;
 }
 .container-show {
   display: flex;
+  z-index: 1;
   animation: slideRight 0.5s ease-in;
 }
+
 .container .content{
   width: 90%;
   height: 90vh;
@@ -177,6 +188,9 @@ body {
   align-items: center;
   flex-direction: column;
   border: 2px dashed black;
+}
+.container-close{
+  z-index: 0;
 }
 
 .container .content .logo{
@@ -195,19 +209,25 @@ body {
   font-size: 15px;
   font-weight:500;
 }
-.content .github{
+.content .btn{
   height: 30px;
   width: 100px;
   outline: none;
   border: none;
   color:#000;
   font-weight: 700;
-  background-color: #0077ff;
+ 
   border-radius:2px;
   border: 2px solid black;  
   text-align: center;
   cursor: pointer;
   
+}
+.content .github{
+  background-color: #0077ff;
+}
+.content .voiceList{
+  background-color: ivory;
 }
 .content .github:active{
   border-color:#fff;
@@ -334,9 +354,13 @@ body {
   }
   
   .calculator span.change {
+    color: rgb(209, 27, 63);
     order: 1;
   }
-  
+  .calculator span.change:active{
+    background-color:rgb(194, 81, 104);
+    color: white;
+  }
   .calculator span.equal {
     order: 19;
   } 
