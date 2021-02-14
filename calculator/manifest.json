@@ -1,6 +1,6 @@
 {
   "name": "Calculator.app",
-  "short_name": "CalC",
+  "short_name": "Calculator",
   "display": "fullscreen",
   "icons": [
     {
