@@ -32,5 +32,6 @@
   "start_url": "/index.html",
   "theme_color": "#0051ff",
   "background_color": "#EEEEEE",
+  "prefer_related_applications": true,
   "orientation":"portrait"
 }
