@@ -1,4 +1,4 @@
-// Registering ServiceWorker
+/*// Registering ServiceWorker
 if ('serviceWorker' in navigator) {
 	navigator.serviceWorker.register('sw.js').then(function (registration) {
 		// Registration was successful
@@ -7,7 +7,16 @@ if ('serviceWorker' in navigator) {
 		// registration failed :(
 		console.log('ServiceWorker registration failed: ', err);
 	});
-}
+} */
+
+//Registering SW
+
+import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+
+const el = document.createElement('pwa-update');
+document.body.appendChild(el);
+
+
 //calculator function
 const del = document.querySelector('.clear');
 var a = document.calc.txt.value;
