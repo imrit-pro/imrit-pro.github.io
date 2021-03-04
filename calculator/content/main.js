@@ -70,7 +70,6 @@ function PopulateVoices(){
 	voiceList.selectedIndex = selectedIndex;
 }
 
-/*
 let deferredPrompt;
 
 window.addEventListener('beforeinstallprompt', (e) => {
@@ -97,8 +96,9 @@ btnAdd.addEventListener('click', (e) => {
       }
       deferredPrompt = null;
     });
-}); */
+}); 
 
+/*
 var msg;
 
   window.addEventListener('beforeinstallprompt', (e) => {
@@ -120,3 +120,4 @@ var msg;
     alert('Error: ' + errorMsg + ' Script: ' + url + ' Line: ' + lineNumber);
 
   }
+*/
