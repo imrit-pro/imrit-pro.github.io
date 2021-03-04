@@ -1,21 +1,8 @@
-/*// Registering ServiceWorker
+//Registring SW
 if ('serviceWorker' in navigator) {
-	navigator.serviceWorker.register('sw.js').then(function (registration) {
-		// Registration was successful
-		console.log('ServiceWorker registration successful with scope: ', registration.scope);
-	}).catch(function (err) {
-		// registration failed :(
-		console.log('ServiceWorker registration failed: ', err);
-	});
-} */
-
-//Registering SW
-
-import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
-
-const el = document.createElement('pwa-update');
-document.body.appendChild(el);
-
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('<add-path-here>/sw.js');
+  });
 
 //calculator function
 const del = document.querySelector('.clear');
