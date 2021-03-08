@@ -75,3 +75,16 @@ if ('serviceWorker' in navigator) {
     console.log('ServiceWorker registration failed: ', err);
   });
 }
+var msg;
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    msg = e;
+  });
+
+  function install() {
+    msg.prompt();
+  }
+
+  window.onerror = function(errorMsg, url, lineNumber) {
+    alert('Error: ' + errorMsg + ' Script: ' + url + ' Line: ' + lineNumber);
+  }
