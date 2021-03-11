@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style type="text/css" media="all">
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      height: 1000px;
+      width: 100%;
+      text-align: center;
+    }
+
+    h2 {
+      margin: 30px;
+      font-size: 35px;
+      color: royalblue;
+    }
+
+    p {
+      font-size: 23px;
+
+    }
+
+    .input {
+      height: 60vh;
+      width: 80%;
+      padding: 10px;
+      font-size: 18px;
+      border: 1px dashed;
+      outline: none;
+    }
+
+    .btn {
+      height: 50px;
+      width: 28%;
+      padding: 5px;
+      margin: 2%;
+      text-align: center;
+      font-size: 15px;
+      border: none;
+      outline: none;
+      border-radius: 12px;
+      background-color: royalblue;
+      color: #fff;
+    }
+
+    .voice {
+      background-color: #DB5841;
+      width: 60%;
+    }
+  </style>
+  <title>Text To Speech</title>
+</head>
+
+<body>
+  <h2>Text To Speech</h2>
+  <p>Enter Text to get convert into Speech</p><br />
+  <textarea type="text" id="txtInput" class="input" placeholder="Enter text here!"></textarea><br />
+  <button id='btnSpeak' class="btn">Speak!</button>
+  <button type="submit" class="btn" onclick="saveTextAsFile(txtInput.value,'Text.txt')">Save</button><br />
+  <select id='voiceList' class="btn voice">
+    <option>Select Voice</option>
+  </select> <br><br>
+  <script>
+    /*text to speech api*/
+    var txtInput = document.querySelector('#txtInput');
+    var voiceList = document.querySelector('#voiceList');
+    var btnSpeak = document.querySelector('#btnSpeak');
+    var synth = window.speechSynthesis;
+    var voices = [];
+
+    PopulateVoices();
+    if (speechSynthesis !== undefined) {
+      speechSynthesis.onvoiceschanged = PopulateVoices;
+    }
+
+    btnSpeak.addEventListener('click', () => {
+
+      var toSpeak = new SpeechSynthesisUtterance(txtInput.value);
+      var selectedVoiceName = voiceList.selectedOptions[0].getAttribute('data-name');
+      voices.forEach((voice) => {
+        if (voice.name === selectedVoiceName) {
+          toSpeak.voice = voice;
+        }
+      });
+      synth.speak(toSpeak);
+      
+    });
+
+    function PopulateVoices() {
+      voices = synth.getVoices();
+      var selectedIndex = voiceList.selectedIndex < 0 ? 0 : voiceList.selectedIndex;
+      voiceList.innerHTML = '';
+      voices.forEach((voice) => {
+        var listItem = document.createElement('option');
+        listItem.textContent = voice.name;
+        listItem.setAttribute('data-lang', voice.lang);
+        listItem.setAttribute('data-name', voice.name);
+        voiceList.appendChild(listItem);
+      });
+
+      voiceList.selectedIndex = selectedIndex;
+    }
+
+    /*function to save file*/
+    function saveTextAsFile(textToWrite, fileNameToSaveAs) {
+      let textFileAsBlob = new Blob([textToWrite], { type: 'text/plain' });
+      let downloadLink = document.createElement('a');
+      downloadLink.download = fileNameToSaveAs;
+      downloadLink.innerHTML = 'Download File';
+
+      if (window.webkitURL != null) {
+        downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+      } else {
+        downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+        downloadLink.onclick = destroyClickedElement;
+        downloadLink.style.display = 'none';
+        document.body.appendChild(downloadLink);
+      }
+
+      downloadLink.click();
+    }
+  </script>
+</body>
+
+</html>
