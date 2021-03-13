@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<head>
+  <style type="text/css" media="all">
+    * {
+      margin: 0px 10px;
+    }
+
+    body {
+      padding: 0;
+      margin: 0;
+      height: 90vh;
+      width: 100%;
+      position: relative;
+      text-align: center;
+      padding-top: 10vh;
+    }
+
+    section {}
+
+    h1 {
+      color: #7681F8;
+      margin-bottom: 100px;
+    }
+
+    h3 {
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    h3 b {
+      font-size: 25px;
+
+    }
+
+    p {
+      padding: 20px;
+      font-size: 15px;
+    }
+
+    button {
+      width: 200px;
+      height: 50px;
+      background-color: #7681F8;
+      font-size: 15px;
+      color: #fff;
+      border-radius: 5px;
+      border: none;
+      outline: none;
+      margin: 10px;
+
+    }
+  </style>
+  <title>Mind Reader</title>
+</head>
+
+<body>
+  <section>
+    <h1>Mind Reader</h1>
+    <h3><b>Hi,</b>I'm a Mind Reader made by Ritesh</h3>
+    <br />
+    <p>I will ask you a small question. <br>Let's see will I able to<b>Read your Mind.</b></p>
+    <button onclick="myFunction()"><b>Get Question</b></button>
+  </section>
+  <script type="text/javascript">
+    function myFunction() {
+
+      let name = prompt("Whats Your Name (required)");
+      if (name === '') {
+        alert('Enter Your name First')
+      } else {
+        alert('Hello, ' + name + ' I am Mind Reader made by Ritesh');
+        alert('Think a number between 1 to 10');
+        alert('Ok, Now multiply the number by 2');
+        alert('Now, You add 4 after multiplying the number');
+        alert('And after that divide the number by 2');
+        alert('Now, substract the resulted number with the number that you think in first');
+        alert('Your present number in your mind is 2');
+        let yn = prompt("If I am right type 'yes' if am wrong then type 'no'(Ans in small letters)");
+
+        var no = 'o';
+
+        var yes = 'es';
+
+        if (yn.includes(yes)) {
+          alert("You are pretty good in mathematics");
+          alert("Thank you for participating. See you soon. Bye!");
+
+        } else if (yn.includes(no)) {
+          alert("You are not good in mathematics");
+          alert("Thank you for participating. See you soon. Bye!");
+        } else{
+          alert("Please don't answer like this");
+          alert('Restart Game Again!');
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>
