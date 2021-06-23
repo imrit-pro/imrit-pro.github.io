@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <head>
 <title>Form submission</title>
 </head>
@@ -13,4 +13,90 @@ Message:<br><textarea rows="5" name="message" cols="30"></textarea><br>
 </form>
 
 </body>
+</html>-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>OTP Demo</title>
+  <style type="text/css" media="all">
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: monospace;
+    }
+
+    body,
+    .box {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .box {
+      height: 300px;
+      width: 400px;
+      background-color: #5B9FFF;
+      border: 2px solid #000;
+    }
+
+    input,
+    button {
+      outline: none;
+      border: 2px solid #000;
+      background: #fff;
+      height: 40px;
+      margin: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100px;
+    }
+
+    p {
+      color: #5BFF91;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="https://formsubmit.co/riteshgharat6@gmail.com" method="POST">
+    <div class="box">
+      <h2>Hi, Ritesh</h2>
+      <input type="password" id="inputOtp" placeholder="Enter Otp" required maxlength="4" name="text" /><br />
+      <input type="text" placeholder="email" name="email" />
+      <button type="submit" onclick="enter()">Enter</button>
+    </div>
+  </form>
+  <p class="finalOut"></p>
+  <script>
+    var otp = Math.floor(Math.random() * 10000 + 1)
+
+    var inputOtp = document.querySelector('#inputOtp');
+    var box = document.querySelector('.box');
+    var finalOut = document.querySelector('.finalOut');
+
+    function enter() {
+      if (inputOtp.value == otp) {
+        //console.log('Otp works succesfuly')
+        box.style.backgroundColor = '#5BFF91'
+        finalOut.innerHTML = 'Otp works succesfuly';
+        box.style.display = 'none';
+        finalOut.style.color = '#5BFF91';
+      }
+      else {
+        finalOut.innerHTML = 'Wrong Otp!';
+        finalOut.style.color = 'red';
+      }
+    }
+    console.log("OTP (Don't share with anyone): " + otp)
+    alert("OTP (Don't share with anyone): " + otp)
+  </script>
+</body>
+
 </html>
